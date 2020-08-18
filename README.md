@@ -1,25 +1,23 @@
-# HerGePred
-Heterogeneous disease-gene-related network embedding representation for disease gene predication
+# PDGNet
+We develop a novel deep neural network model that fuses the multi-view features of phenotypes and genotypes to identify disease genes (termed PDGNet). Our model integrated the multi-view features of diseases and genes and leveraged the feedback information of training samples to optimize the parameters of deep neural network and obtain the deep vector features of diseases and genes. The evaluation experiments on a large data set indicated that PDGNet obtained higher performance
+than the state-of-the-art method (precision and recall improved by 9.55% and 9.63%).
 
-### 1. Generate embedding vectors of nodes in heterogeneous network
-+ Step (1): run n2v/e2v_walks.py
-   + Input file: 
-   data/edges_example.txt (i.e., all edges of a heterogeneous network)
-   + Output file: 
-   data/walks.txt (i.e., the result of random walks)
-+ Step (2): run n2v/learn_vecs.py
-   + Input file: 
-   data/walks.txt (i.e., the result of random walks)
-   + Output files: 
-      + data/emb.txt (i.e., embedding vectors of nodes, text format)
-      + data/emb.model (i.e., embedding vectors of nodes, binary format)
+## Tested environment
++ python=2.7
++ tensorflow=1.4
++ numpy>=1.17
 
 
-### 2. Predict disease genes based on embedding vectors
-Run prediction/dis_gene_pred.py
-   + Input files: 
-      + data/cv10_of0.txt (i.e., train and test data)
-      + data/nodes.txt (i.e., nodes in network)
-      + data/emb.model (i.e., embedding vectors of nodes, binary format)
-   + Output file:
-      + data/prediction_results.txt (i.e., prediction results for disease genes)
+## Basic Usage
+### 1. Generate 1 order genes based on PPI data for negative sample screening
++ Run PPI_neighbor.py
+
+
+### 2. Predict disease genes using PDGNet
++ Run train.py
+
+
+## Citing
+
+If you find PDGNet useful for your research, please consider citing the following paper:
+K. Yang\#, Y. Zheng\#,  K. Lu, K. Chang, N. Wang, Z. Shu, J. Yu, B. Liu, Z. Gao, X. Zhou\*. PDGNet: predicting disease genes using a deep neural network with multi-view features. IEEE-ACM Transactions on Computational Biology and Bioinformatics, 2020. doi:10.1109/TCBB.2020.3002771.
