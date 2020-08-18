@@ -19,5 +19,5 @@ than the state-of-the-art method (precision and recall improved by 9.55% and 9.6
 
 ## Citing
 
-If you find PDGNet useful for your research, please consider citing the following paper:
+If you find PDGNet useful for your research, please consider citing the following paper:  
 K. Yang\#, Y. Zheng\#,  K. Lu, K. Chang, N. Wang, Z. Shu, J. Yu, B. Liu, Z. Gao, X. Zhou\*. PDGNet: predicting disease genes using a deep neural network with multi-view features. IEEE-ACM Transactions on Computational Biology and Bioinformatics, 2020. doi:10.1109/TCBB.2020.3002771.
